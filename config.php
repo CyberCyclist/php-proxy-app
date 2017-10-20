@@ -20,12 +20,13 @@ $config['url_mode'] = 1;
 
 // plugins to load - plugins will be loaded in this exact order as in array
 $config['plugins'] = array(
-	'Test',
-	'Stream',
 	'HeaderRewrite',
+	'Stream',
+	// ^^ do not disable any of the plugins above
 	'Cookie',
 	'Proxify',
-	// site specific plugins
+	'UrlForm',
+	// site specific plugins below
 	'Youtube',
 	'DailyMotion',
 	'RedTube',
@@ -36,9 +37,11 @@ $config['plugins'] = array(
 
 // additional curl options to go with each request
 $config['curl'] = array(
-	//CURLOPT_INTERFACE => '123.123.123.13',
-	//CURLOPT_USERAGENT => 'Firefox 5000'
+	// CURLOPT_INTERFACE => '123.123.123.13',
+	// CURLOPT_CONNECTTIMEOUT => 5
 );
+
+//$config['replace_title'] = 'Google Search';
 
 //$config['error_redirect'] = "https://unblockvideos.com/#error={error_msg}";
 //$config['index_redirect'] = 'https://unblockvideos.com/';
